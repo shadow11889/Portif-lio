@@ -1,0 +1,252 @@
+/* ==========================================================================
+   GOMES INDUSTRIES - MASTER STYLESHEET
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --cor-fundo: #0a0a0a;
+  --bg-card: #18181b;
+  --bg-card-hover: #27272a;
+  --borda-suave: #27272a;
+
+  --cor-branco: #ffffff;
+  --texto-secundario: #a1a1aa;
+  --cor-turquesa: #00bcd4;
+
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-subtitulo: 'Montserrat', sans-serif;
+
+  --raio-borda: 8px;
+  --transicao-padrao: all 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-branco);
+  font-family: var(--fonte-subtitulo);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background-color: var(--cor-fundo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  border-bottom: 1px solid var(--borda-suave);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-site {
+  display: flex;
+  flex-direction: column;
+}
+
+.marca-gomes {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sub-industries {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--cor-turquesa);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  transition: var(--transicao-padrao);
+}
+
+.menu a:hover {
+  color: var(--cor-turquesa);
+}
+
+/* SEÇÃO HISTÓRIA & FUNDADOR */
+.info {
+  padding: 50px 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.5rem;
+}
+
+.info-indus, .info-fun {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda-suave);
+  border-radius: var(--raio-borda);
+  padding: 30px;
+  transition: var(--transicao-padrao);
+}
+
+.info-indus h3, .texto-fundador h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--cor-turquesa);
+  margin-bottom: 15px;
+}
+
+.info-indus p, .texto-fundador p {
+  color: var(--texto-secundario);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+/* ALINHAMENTO DA FOTO DO FUNDADOR */
+.foto-text {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.foto-text img {
+  width: 180px;         
+  min-width: 180px;
+  object-fit: cover;
+  border-radius: 50%;   
+  border: 2px solid var(--cor-turquesa);
+}
+
+/* SEÇÃO PROJETOS */
+.secao-projetos {
+  padding: 20px 8% 60px 8%;
+}
+
+.secao-projetos h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.categoria-bloco {
+  margin-bottom: 40px;
+}
+
+.badge-categoria {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-turquesa);
+  background-color: rgba(0, 188, 212, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card-projeto {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda-suave);
+  border-radius: var(--raio-borda);
+  padding: 15px;
+  overflow: hidden;
+  transition: var(--transicao-padrao);
+}
+
+.card-projeto:hover {
+  border-color: var(--cor-turquesa);
+  transform: translateY(-3px);
+}
+
+.video-container {
+  max-width: 480px;     /* Impede de esticar na tela inteira */
+  width: 100%;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantém a proporção perfeita de cinema/YouTube */
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.img-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* CARD DEV */
+.card-dev-info h4 {
+  color: var(--cor-branco);
+  margin-bottom: 8px;
+}
+
+.card-dev-info p {
+  color: var(--texto-secundario);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
+  font-size: 0.7rem;
+  background-color: var(--cor-fundo);
+  color: var(--cor-turquesa);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--borda-suave);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--borda-suave);
+  color: var(--texto-secundario);
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .foto-text {
+    flex-direction: column;
+    text-align: center;
+  }
+}
