@@ -1,4 +1,4 @@
-# 🏢 Gomes Industries — Official Portfolio
+# 🏢 Gomes Industries — Official Portfólio
 
 ![Gomes Industries Banner](https://img.shields.io/badge/Status-Em%20Desenvolvimento-00bcd4?style=for-the-badge)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
